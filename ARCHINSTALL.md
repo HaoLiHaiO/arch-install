@@ -92,6 +92,7 @@ default instead of systemd-resolvconf)
     NameResolvingService systemd
 
 - now run iwctl, same process as before
+- test with ping
 
 ## Package installation
 
