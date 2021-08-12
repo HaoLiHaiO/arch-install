@@ -45,9 +45,53 @@ network etc.).
 - pacman -Syu netctl dialog dhcpcd wpa_supplicant ifplugd (with openresolv as
 default instead of systemd-resolvconf)
 
-## User add
+## User add and sudo
 
 - useradd -G wheel,audio,video -m *username*
+- passwd *username*
+- passwd (without anything for root)
+- pacman -Syu sudo
+- pacman -Syu vim nano && EDITOR=vim visudo and uncomment wheel group
+
+## Bootloader - GRUB
+
+- pacman -Syu grub efibootmgr
+- grub-install --target=x86_64-efi --efi-directory=/efi/ --bootloader-id=Arch
+- grub-mkconfig -o /boot/grub/grub.cfg
+
+## Exit chroot and reboot
+
+- log in as user and then sudo su to check if root login works
+
+### Locale
+
+- vim /etc/locale.gen and uncomment the right option
+- run locale.gen
+- vim /etc/locale.conf and: LANG=en_US-UTF8
+
+### Network - hostname and hosts
+
+- archlinux is default hostname, to change it:
+  vim /etc/hostname and: *yourhostname* (e.g. *Alex*)
+- vim /etc/hosts:
+  127.0.0.1  localhost
+  ::1        localhost
+  127.0.0.1  *yourhostname*.localdomain *yourhostname*
+
+#### Enabling and starting the network using iwd which we installed
+
+- systemctl enable iwd.service
+- systemctl start iwd.service
+- systemctl enable systemd-resolved.service
+- systemctl start systemd-resolved.service
+- vim /etc/iwd/main.conf
+    [General]
+    EnableNetworkConfiguration=true
+    
+    [Network]
+    NameResolvingService systemd
+
+- now run iwctl, same process as before
 
 ## Package installation
 
