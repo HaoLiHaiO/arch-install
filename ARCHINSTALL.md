@@ -92,10 +92,21 @@ default instead of systemd-resolvconf)
     NameResolvingService systemd
 
 - now run iwctl, same process as before
-- test with ping
+- test with ping on reboot
 
-## Package installation
+## WM and package installation
 
+Can be turned into an automated script for future installs
+
+- sudo pacman -Syu && sudo pacman -S xfce4 xfce4-goodies xorg
+- sudo pacman -Syu git
+- sudo pacman -Syu terminator
+- sudo pacman -Syu firefox-developer-edition
+- sudo pacman -Syu --needed base-devel
+- git *chrome AUR git address* && cd google-chrome-stable/ && makepkg -si
+- git clone https://aur.archlinux.org/visual-studio-code-bin.git && cd 
+visual-studio-code-bin && makepkg -si
 - sudo pacman -Syu openssh && ssh-keygen -t ed25519 -C *github email*
+- asdf: [ASDF Install Guide](https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies)
 
 
