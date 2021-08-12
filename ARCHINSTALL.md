@@ -45,3 +45,12 @@ network etc.).
 - pacman -Syu netctl dialog dhcpcd wpa_supplicant ifplugd (with openresolv as
 default instead of systemd-resolvconf)
 
+## User add
+
+- useradd -G wheel,audio,video -m *username*
+
+## Package installation
+
+- sudo pacman -Syu openssh && ssh-keygen -t ed25519 -C *github email*
+
+
