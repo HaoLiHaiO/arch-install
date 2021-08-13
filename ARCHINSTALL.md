@@ -99,3 +99,4 @@ Can be turned into an automated script for future installs
 visual-studio-code-bin && makepkg -si
 - sudo pacman -Syu openssh && ssh-keygen -t ed25519 -C *github email*
 - asdf: [ASDF Install Guide](https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies)
+- sudo pacman -Syu yarn nodejs
