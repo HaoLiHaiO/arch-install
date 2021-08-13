@@ -2,7 +2,7 @@
 
 My goal for writing this personal guide:
 - A simple checklist which works in my personal case
-- Automating the post installation setup
+- Automating the post installation setup in the future
 
 ## Disclaimer
 
