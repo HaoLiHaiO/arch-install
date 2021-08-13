@@ -1,3 +1,5 @@
+*.md linguist-detectable=true
+
 # My Arch Install - UEFI and network (August 2021)
 
 ## Partitioning
