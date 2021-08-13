@@ -1,1 +1,6 @@
+# Linguist overrides
 *.md linguist-detectable=true
+README.md linguist-detectable=true
+readme.md linguist-detectable=true
+ARCHINSTALL.md linguist-detectable=true
+archinstall.md linguist-detectable=true
