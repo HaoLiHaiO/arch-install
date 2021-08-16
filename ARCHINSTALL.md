@@ -3,7 +3,7 @@
 ## Partitioning
 
 [//]: # (cfdisk /dev/sdX or /dev/nvme)
-- Either use cfdisk /dev/*diskname*
+- Either use cfdisk /dev/*diskname* or fdisk
 - Swap partition can be made later
 - New syntax for EFI formatting: mkfs.fat -F 32 /dev/*bootpartition*
 - Root formatting: mkfs.ext4 /dev/*rootpartition*
